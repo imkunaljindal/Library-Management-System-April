@@ -7,6 +7,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import java.util.Date;
 
@@ -24,6 +25,9 @@ public class Card {
 
     @CreationTimestamp
     private Date issueDate;
+
+    @UpdateTimestamp
+    private Date updatedOn;
 
     @Enumerated(EnumType.STRING)
     private CardStatus cardStatus;
