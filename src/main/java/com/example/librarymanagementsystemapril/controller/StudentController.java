@@ -37,7 +37,7 @@ public class StudentController {
     // update the student by id
 
     @GetMapping("/get_student")
-    public Student getStudent(@RequestParam("id") int id){
+    public StudentRequestDto getStudent(@RequestParam("id") int id){
         return studentService.getStudentById(id);
     }
 
