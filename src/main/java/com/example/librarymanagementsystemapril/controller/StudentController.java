@@ -2,6 +2,7 @@ package com.example.librarymanagementsystemapril.controller;
 
 import com.example.librarymanagementsystemapril.DTO.RequestDto.StudentRequestDto;
 import com.example.librarymanagementsystemapril.DTO.RequestDto.UpdateStudentMobRequestDto;
+import com.example.librarymanagementsystemapril.DTO.ResponseDto.StudentResponseDto;
 import com.example.librarymanagementsystemapril.DTO.ResponseDto.UpdateStudentMobNoResponseDto;
 import com.example.librarymanagementsystemapril.entity.Student;
 import com.example.librarymanagementsystemapril.exceptions.StudentNotFoundException;
@@ -37,7 +38,7 @@ public class StudentController {
     // update the student by id
 
     @GetMapping("/get_student")
-    public StudentRequestDto getStudent(@RequestParam("id") int id){
+    public StudentResponseDto getStudent(@RequestParam("id") int id){
         return studentService.getStudentById(id);
     }
 
